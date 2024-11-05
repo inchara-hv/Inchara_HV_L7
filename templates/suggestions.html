@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Customer Suggestions</h2>
+<ul>
+    {% for suggestion in suggestions %}
+    <li>{{ suggestion[1] }} suggested "{{ suggestion[2] }}" - Allergy Concerns: {{ suggestion[3] }}</li>
+    {% endfor %}
+</ul>
+<h3>Add a Customer Suggestion</h3>
+<form method="POST">
+    Customer Name: <input type="text" name="customer_name" required><br>
+    Flavor Suggestion: <input type="text" name="flavor_suggestion" required><br>
+    Allergy Concerns: <input type="text" name="allergy_concerns"><br>
+    <input type="submit" value="Submit Suggestion">
+</form>
+{% endblock %}

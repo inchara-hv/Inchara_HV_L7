@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #4e342e; /* Dark Chocolate Brown */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc80;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2 {
+    color: #3e2723; /* Darker Chocolate */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3 {
+    color: #5d4037;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+form input[type="submit"] {
+    background-color: #4e342e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3e2723;
+}
+
+/* Lists and Cards */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+ul li {
+    background-color: #fafafa;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 6px solid #4e342e;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul li span {
+    font-weight: 500;
+}
+
+ul li button {
+    background-color: #8d6e63;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ul li button:hover {
+    background-color: #6d4c41;
+}
+
+/* Card Layout for Forms and Data Display */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+    nav a {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    form input[type="text"],
+    form input[type="number"] {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    form input[type="submit"] {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+    ul li {
+        padding: 12px;
+    }
+    ul li button {
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+}

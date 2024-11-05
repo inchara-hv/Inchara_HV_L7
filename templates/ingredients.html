@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Ingredient Inventory</h2>
+<ul>
+    {% for ingredient in ingredients %}
+    <li>{{ ingredient[1] }} - {{ ingredient[2] }} units in stock</li>
+    {% endfor %}
+</ul>
+<h3>Add an Ingredient</h3>
+<form method="POST">
+    Ingredient Name: <input type="text" name="ingredient_name" required><br>
+    Quantity in Stock: <input type="number" name="quantity_in_stock" required><br>
+    <input type="submit" value="Add Ingredient">
+</form>
+{% endblock %}

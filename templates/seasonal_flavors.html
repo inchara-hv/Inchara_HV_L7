@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Seasonal Flavors</h2>
+<ul>
+    {% for flavor in flavors %}
+    <li>{{ flavor[1] }} (Season: {{ flavor[2] }})</li>
+    {% endfor %}
+</ul>
+<h3>Add a New Flavor</h3>
+<form method="POST">
+    Flavor Name: <input type="text" name="flavor_name" required><br>
+    Available Season: <input type="text" name="available_season" required><br>
+    <input type="submit" value="Add Flavor">
+</form>
+{% endblock %}
