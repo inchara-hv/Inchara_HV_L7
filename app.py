@@ -44,6 +44,13 @@ def seasonal_flavors():
     if request.method == 'POST':
         flavor_name = request.form['flavor_name']
         available_season = request.form['available_season']
+        #check flavour is already exist
+        existing_flavour=cursor.fetchone()
+        if existing _flavour:
+        error_message=falvour already exists!"
+        return
+        render_template("seasonal_flavour.html",error_message=error_message)
+        
         cursor.execute("INSERT INTO seasonal_flavors (flavor_name, available_season) VALUES (?, ?)", 
                        (flavor_name, available_season))
         conn.commit()
@@ -78,6 +85,7 @@ def ingredients():
 def suggestions():
     conn = sqlite3.connect("chocolate_house.db")
     cursor = conn.cursor()
+
     
     if request.method == 'POST':
         customer_name = request.form['customer_name']
